@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  cpp:
+    build:
+      context: .
+    tty: true
+    working_dir: /home/node/works
+    volumes:
+      - ./works:/home/node/works
