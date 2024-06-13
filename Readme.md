@@ -39,14 +39,12 @@ root
 +---.devcontainer
     |   devcontainer.json
     |   docker-compose.yml
-    |   Dockerfile  # config file for container, no editing allowed
+    |   Dockerfile  # config file for container, DON'T EDIT.
     |
     \---works
-        |   a.out
-        |   debug
-        |   run.sh
+        |   Makefile # Makefile to initialize the issue and execute commands
         |
-        +---.vscode # Configuration file for debugging, no editing allowed
+        +---.vscode # Configuration file for debugging, DON'T EDIT.
         |       c_cpp_properties.json
         |       launch.json
         |       settings.json
@@ -56,14 +54,13 @@ root
         |   |   .gitignore
         |   |
         |   \---[date]
-        |           [difficulty].cpp # Actual solution cpp program
-        |           [difficulty].in  # Input file
-        |           [difficulty].out # Output file, you don't need to create
-        |           [difficulty].res # Result file
+        |           [difficulty].cpp # Actual solution cpp program, created by makefile
+        |           [difficulty].in  # Input file, created by makefile
+        |           [difficulty].res # Result file, created by makefile
+        |           [difficulty].txt # Output file, you don't need to create
         +---scripts
         |       rename.py # DON'T EDIT
-        |       rename.sh # Execute before executing the program and the demon general.
-        |       run.sh # Execution script without debugging.
+        |
         |
         \---sample_code # Template code commonly used in AtCoder
 
@@ -73,21 +70,21 @@ root
 
 You basically write the program in `works/problems/[date]/[difficulty]`.cpp. Name [date] the name of the contest, [difficulty] a.cpp if it is an A problem, and so on.
 
-> ex.) works/problems/abc352/a.cpp
-> ex.) works/problems/abc352/a.in
-> ex.) works/problems/abc352/a.res
+To do so you should execute the following make command Be sure to go through this command as it also configures the settings for later debugging. These files are created by the following make command, and you only need to edit them.
 
-The [difficulty].txt file is automatically output and does not need to be created by you.
-
-Before executing, run `sh scripts/rename.sh [date] [difficult]`. These will configure the debugger and other settings.
-
-> ex) sh scripts/rename.sh abc352 a
+```bash
+make init date=[date] diff=[difficulty]
+```
 
 It would not be a bad idea to register an alias for this command in bashrc.
 
 ### Excution(without debug)
 
-Run `sh run.sh' and the results will be output to standard output and a file.
+All you have to do is execute the following command.
+
+```bash
+make run date=[date] diff=[difficulty]
+```
 
 ### Excution(with debug)
 

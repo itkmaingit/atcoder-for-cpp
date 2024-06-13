@@ -1,16 +1,24 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
+int main()
+{
+}
+
+// ----------------------------------------------------------------
+// sample input code
+
 // N
-void N()
+void __N()
 {
   int N;
   cin >> N;
 }
 
 // A B
-void AB()
+void __AB()
 {
   int A, B;
   cin >> A >> B;
@@ -18,7 +26,7 @@ void AB()
 
 // N
 // a1 a2 a3 ... aN
-void N_aN()
+void __N_aN()
 {
   int N;
   cin >> N;
@@ -34,7 +42,7 @@ void N_aN()
 // a2
 // ...
 // aN
-void N_aN_vert()
+void __N_aN_vert()
 {
   int N;
   cin >> N;
@@ -50,7 +58,7 @@ void N_aN_vert()
 // a21 a22 ... a2M
 // ...
 // aN1 aN2 ... aNM
-void NM_matrix()
+void __NM_matrix()
 {
   int N, M;
   cin >> N >> M;
@@ -65,7 +73,7 @@ void NM_matrix()
 }
 
 // s
-void char_input()
+void __char_input()
 {
   string s;
   cin >> s;
@@ -76,7 +84,7 @@ void char_input()
 // s2
 // ...
 // sN
-void multiple_char()
+void __multiple_char()
 {
   int N;
   cin >> N;
