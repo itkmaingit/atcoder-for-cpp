@@ -7,6 +7,11 @@ on:
       - synchronize
       - ready_for_review
 jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check secrets
+        run: echo ${{ secrets.BOT_TOKEN }}
   approve:
     if: |
       github.event.pull_request.user.login == github.repository_owner
