@@ -2,4 +2,3 @@
 *.out
 debug
 .vscode/*
-.devcontainer/works/.vscode/*

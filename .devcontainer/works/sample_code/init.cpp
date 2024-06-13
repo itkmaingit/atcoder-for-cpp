@@ -11,14 +11,14 @@ int main()
 // sample input code
 
 // N
-void __N()
+void __input_N()
 {
   int N;
   cin >> N;
 }
 
 // A B
-void __AB()
+void __input_AB()
 {
   int A, B;
   cin >> A >> B;
@@ -26,7 +26,7 @@ void __AB()
 
 // N
 // a1 a2 a3 ... aN
-void __N_aN()
+void __input_N_aN()
 {
   int N;
   cin >> N;
@@ -42,7 +42,7 @@ void __N_aN()
 // a2
 // ...
 // aN
-void __N_aN_vert()
+void __input_N_aN_vert()
 {
   int N;
   cin >> N;
@@ -58,7 +58,7 @@ void __N_aN_vert()
 // a21 a22 ... a2M
 // ...
 // aN1 aN2 ... aNM
-void __NM_matrix()
+void __input_NM_matrix()
 {
   int N, M;
   cin >> N >> M;
@@ -73,7 +73,7 @@ void __NM_matrix()
 }
 
 // s
-void __char_input()
+void __input_char_input()
 {
   string s;
   cin >> s;
@@ -84,7 +84,7 @@ void __char_input()
 // s2
 // ...
 // sN
-void __multiple_char()
+void __input_multiple_char()
 {
   int N;
   cin >> N;
